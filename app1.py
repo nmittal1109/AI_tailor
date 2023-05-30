@@ -122,7 +122,7 @@ def predict_cuff(df, wrist_cuff, height,weight, bicep):
 
 def apply_prediction_logic(df, filter_condition, measurement, order_sheet_col, measurement_col):
     filtered_data = df[filter_condition]
-    if filtered_data.shape[0] <2:
+    if filtered_data.shape[0] <1:
         predicted_measurement = 'error'
     else:
         average_difference = (filtered_data[order_sheet_col] - filtered_data[measurement_col]).mean()
