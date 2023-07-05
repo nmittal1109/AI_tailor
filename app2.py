@@ -363,6 +363,7 @@ else:
             df_test['predicted_wrist_order'] = df_test.apply(predict_wrist_order, axis=1)
             df_test['predicted_bicep_order'] = df_test.apply(predict_bicep_order, axis=1)
             st.dataframe(df_test)
+            df_test1=df_test
             df_test1 = df_test1.round(2)
             data_dict = df_test1.iloc[0].to_dict()
 
