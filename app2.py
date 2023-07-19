@@ -49,12 +49,12 @@ def predict_neck_order(test_row):
         filtered_df = filtered_df[filtered_df['fit'] == test_row['fit']]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+        #return 'ERROR'
 
     # Else return the average of 'neck (order sheet)'
-    else:
-        return filtered_df['neck (order sheet)'].mean()
+    #else:
+    return filtered_df['neck (order sheet)'].mean()
 
 # Creating a new column 'predicted_neck_order' based on the function
 
@@ -85,12 +85,12 @@ def predict_chest_order(test_row):
             filtered_df = filtered_df[(filtered_df['country'] != 'US') & (filtered_df['country'] != 'SG')]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+        #return 'ERROR'
 
     # Else return the average of 'chest (order sheet)'
-    else:
-        return filtered_df['chest (order sheet)'].mean()
+    #else:
+    return filtered_df['chest (order sheet)'].mean()
 
 
 
@@ -119,12 +119,12 @@ def predict_stomach_order(test_row):
             filtered_df = filtered_df[(filtered_df['country'] != 'US') & (filtered_df['country'] != 'SG')]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+     #   return 'ERROR'
 
     # Else return the average of 'chest (order sheet)'
-    else:
-        return filtered_df['stomach (order sheet)'].mean()
+    #else:
+    return filtered_df['stomach (order sheet)'].mean()
 
     
 def predict_hips_order(test_row):
@@ -152,12 +152,12 @@ def predict_hips_order(test_row):
             filtered_df = filtered_df[(filtered_df['country'] != 'US') & (filtered_df['country'] != 'SG')]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+    #    return 'ERROR'
 
     # Else return the average of 'chest (order sheet)'
-    else:
-        return filtered_df['hips (order sheet)'].mean()
+    #else:
+    return filtered_df['hips (order sheet)'].mean()
     
     
 def predict_shirt_length_order(test_row):
@@ -173,12 +173,12 @@ def predict_shirt_length_order(test_row):
         filtered_df = filtered_df[filtered_df['shirt style'] == test_row['shirt style']]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+    #    return 'ERROR'
 
     # Else return the average of 'neck (order sheet)'
-    else:
-        return filtered_df['shirt-length (order sheet)'].mean()
+    #else:
+    return filtered_df['shirt-length (order sheet)'].mean()
     
     
 def predict_sleeve_length_order(test_row):
@@ -194,12 +194,12 @@ def predict_sleeve_length_order(test_row):
      #   filtered_df = filtered_df[filtered_df['shirt style'] == test_row['shirt style']]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+        #return 'ERROR'
 
     # Else return the average of 'neck (order sheet)'
-    else:
-        return filtered_df['arm-length (order sheet)'].mean()
+    #else:
+    return filtered_df['arm-length (order sheet)'].mean()
     
     
     
@@ -216,12 +216,12 @@ def predict_shoulders_order(test_row):
          filtered_df = filtered_df[(np.abs(filtered_df['chest'] - test_row['chest']) <= 2)]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+        #return 'ERROR'
 
     # Else return the average of 'neck (order sheet)'
-    else:
-        return filtered_df['shoulders (order sheet)'].mean()
+    #else:
+    return filtered_df['shoulders (order sheet)'].mean()
     
     
     
@@ -251,12 +251,12 @@ def predict_wrist_order(test_row):
             filtered_df = filtered_df[(filtered_df['country'] != 'US') & (filtered_df['country'] != 'SG')]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+     #   return 'ERROR'
 
     # Else return the average of 'chest (order sheet)'
-    else:
-        return filtered_df['wrist (order sheet)'].mean()
+    #else:
+    return filtered_df['wrist (order sheet)'].mean()
     
     
     
@@ -286,12 +286,12 @@ def predict_bicep_order(test_row):
             filtered_df = filtered_df[(filtered_df['country'] != 'US') & (filtered_df['country'] != 'SG')]
 
     # If the number of profiles is less than 2, return 'ERROR'
-    if filtered_df.shape[0] < 2:
-        return 'ERROR'
+    #if filtered_df.shape[0] < 2:
+     #   return 'ERROR'
 
     # Else return the average of 'wrist (order sheet)'
-    else:
-        return filtered_df['bicep (order sheet)'].mean()
+    #else:
+    return filtered_df['bicep (order sheet)'].mean()
 
 st.title('')
 st.markdown(gif_html, unsafe_allow_html=True)
